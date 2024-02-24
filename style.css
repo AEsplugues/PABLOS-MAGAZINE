@@ -1,0 +1,259 @@
+@import url('https://fonts.cdnfonts.com/css/morganite');
+@import url('https://fonts.cdnfonts.com/css/bw-modelica-ss01');
+
+:root {
+  /* Fonts */
+  --pm-titel-font: 'Morganite', sans-serif;
+  --pm-text-font: 'Bw Modelica SS01', sans-serif;
+
+  /* Padding */
+  --pm-paddind-s: 10px;
+  --pm-paddind-m: 20px;
+  --pm-paddind-l: 40px;
+  --pm-paddind-xl: 80px;
+
+  /* Colors */
+  --pm-color-000: #d9d9d9;
+  --pm-color-100: #a25e2d;
+  --pm-color-200: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: var(--pm-text-font);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: var(--pm-paddind-s);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+
+h1 {
+  font-family: var(--pm-titel-font);
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  padding-left: 20px;
+}
+nav {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--pm-paddind-m);
+  min-width: 600px;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--pm-paddind-l);
+  align-items: center;
+  padding-right: 20px;
+}
+.icons > li > img {
+  width: 20px;
+}
+/* main */
+.hero {
+  width: 100%;
+  display: flex;
+}
+.hero > h2 {
+  position: absolute;
+  top: 20rem;
+  left: 200px;
+  color: white;
+  font-size: 150px;
+  max-width: 900px;
+}
+.hero > video {
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+}
+.hero > button {
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  top: 56rem;
+  left: 200px;
+  border: 0;
+  border-radius: 50px;
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--pm-color-100);
+  transition: background-color 0.5s;
+}
+.hero > button:hover {
+  background-color: var(--pm-color-100);
+  color: var(--pm-color-000);
+}
+
+.categories > ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card > img {
+  width: 100%;
+  display: flex;
+}
+.card > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+}
+.card > div > a {
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+  transition: text-decoration 1;
+}
+.card > div > a:hover {
+  text-decoration: inherit;
+}
+footer {
+  display: flex;
+  padding-top: 100px;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+footer > ul > li:first-child {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+footer > ul > li {
+  padding-bottom: 10px;
+}
+footer > ul {
+  justify-content: left;
+}
+footer > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+.containter {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.slider {
+  margin-top: 60px;
+  display: flex;
+  max-width: 900px;
+  height: 500px;
+  width: 100%;
+  overflow-x: scroll;
+}
+h4 {
+  padding-top: 60px;
+  font-size: 20px;
+  letter-spacing: 25px;
+  text-transform: uppercase;
+}
+.slider img {
+  width: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+@media (max-width: 1000px) {
+  body {
+    min-width: 500px;
+  }
+  .links {
+    display: none;
+  }
+  nav {
+    display: flex;
+  }
+
+  ul.icons {
+    justify-content: end;
+    width: 100%;
+  }
+  .hero > h2 {
+    position: absolute;
+    top: 30rem;
+    left: 20px;
+    color: white;
+    font-size: 50px;
+    max-width: 500px;
+  }
+  .hero > video {
+    width: 100%;
+    height: 100svh;
+    object-fit: cover;
+  }
+  .hero > button {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 40rem;
+    left: 20px;
+    border: 0;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--pm-color-100);
+    transition: background-color 0.5s;
+  }
+  .hero > button:hover {
+    background-color: var(--pm-color-100);
+    color: var(--pm-color-000);
+  }
+
+  .categories > ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: center;
+  }
+  footer > ul > li:first-child {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-weight: 600;
+    padding-top: 15px;
+  }
+}
