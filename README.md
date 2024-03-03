@@ -1,2 +1,3 @@
 # PABLOS-MAGAZINE
- Shop e-Comerce
+
+Shop e-Comerce

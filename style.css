@@ -59,6 +59,11 @@ nav {
   padding: var(--pm-paddind-m);
   min-width: 600px;
 }
+.links a {
+  text-decoration: none;
+  color: var(--pm-color-000);
+  font-weight: 500;
+}
 .icons {
   display: flex;
   justify-content: flex-end;
